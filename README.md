@@ -24,7 +24,7 @@ To run the app first
 
 ## Deployed Link
 
-
+https://bethtgreen.github.io/Employee-Directory/
 
 ## Lint
 Lint errors have been disabled.
