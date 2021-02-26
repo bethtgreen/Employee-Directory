@@ -4,6 +4,7 @@ import Nav from "./Nav";
 import API from "../utils/API";
 import "../styles/DataArea.css";
 
+//export the DataArea here
 export default class DataArea extends Component {
   
     state = {
@@ -63,6 +64,7 @@ export default class DataArea extends Component {
         const sortedUsers = this.state.filteredUsers.sort(compareFnc);
         this.setState({ filteredUsers: sortedUsers });
       },
+      //handle search change here
       handleSearchChange: event => {
         console.log(event.target.value);
         const filter = event.target.value;
@@ -86,7 +88,7 @@ export default class DataArea extends Component {
       });
     });
   }
-
+// render on the page here
   render() {
     return (
       <>

@@ -1,7 +1,7 @@
 import React from "react";
 import SearchBox from "./SearchBox.js";
 import "../styles/Nav.css";
-
+//functional nav bar here with dob and search bar
 function Nav({ handleSearchChange }) {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -23,7 +23,7 @@ function Nav({ handleSearchChange }) {
               DOB
             </span>
           </div>
-          <input type="date" className="form-control" />
+          
           <input type="date" className="form-control" />
         </div>
         <div className="search-area col-4">
