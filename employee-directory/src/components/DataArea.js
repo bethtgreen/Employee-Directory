@@ -5,12 +5,11 @@ import API from "../utils/API";
 import "../styles/DataArea.css";
 
 export default class DataArea extends Component {
-
+  
     state = {
       users: [{}],
       order: "descend",
       filteredUsers: [{}],
-      
       headings: [
         { name: "Image", width: "10%" },
         { name: "Name", width: "10%" },
@@ -33,29 +32,26 @@ export default class DataArea extends Component {
 
         const compareFnc = (a, b) => {
           if (this.state.order === "ascend") {
-            
-            // this will account for missing values
+            // account for missing values
             if (a[heading] === undefined) {
               return 1;
             } else if (b[heading] === undefined) {
               return -1;
             }
-            
-            // numerical order 
+            // numerically
             else if (heading === "name") {
               return a[heading].first.localeCompare(b[heading].first);
             } else {
               return a[heading] - b[heading];
             }
           } else {
-            
-            // this will acct for missing values
+            // account for missing values
             if (a[heading] === undefined) {
               return 1;
             } else if (b[heading] === undefined) {
               return -1;
             }
-            // numerical order
+            // numerically
             else if (heading === "name") {
               return b[heading].first.localeCompare(a[heading].first);
             } else {
@@ -67,13 +63,11 @@ export default class DataArea extends Component {
         const sortedUsers = this.state.filteredUsers.sort(compareFnc);
         this.setState({ filteredUsers: sortedUsers });
       },
-      
       handleSearchChange: event => {
         console.log(event.target.value);
         const filter = event.target.value;
         const filteredList = this.state.users.filter(item => {
-         
-            // this puts the data together and then sees if theres anything inside
+          // merge data together, then see if user input is anywhere inside
           let values = Object.values(item)
             .join("")
             .toLowerCase();
@@ -81,7 +75,8 @@ export default class DataArea extends Component {
         });
         this.setState({ filteredUsers: filteredList });
       }
-    };
+    
+  }
 
   componentDidMount() {
     API.getUsers().then(results => {
