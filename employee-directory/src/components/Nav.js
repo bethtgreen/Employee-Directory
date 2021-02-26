@@ -7,7 +7,8 @@ function Nav({ handleSearchChange }) {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <button
       //mobile responsiveness
-        className="navbar-toggler"
+       
+      className="navbar-toggler"
         type="button"
         data-toggle="collapse"
         data-target="#navbarNav"
@@ -30,6 +31,7 @@ function Nav({ handleSearchChange }) {
           <input type="date" className="form-control" />
         </div>
         <div className="search-area col-4">
+          
           <SearchBox handleSearchChange={handleSearchChange} />
         </div>
       </div>

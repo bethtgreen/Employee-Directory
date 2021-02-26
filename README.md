@@ -9,7 +9,7 @@ API that was used was
 
 ## User-Story
 As a user, I want to be able to view my entire employee directory at once so that I have quick access to their information.
-
+You can search employees based on DOB or Name in the search bar.
 
 ## Directions
 To run the app first 
