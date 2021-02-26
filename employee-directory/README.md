@@ -19,7 +19,7 @@ To run the app first
 
 ## Application Screenshots
 
-![Alt text](public/assets/screenshot1.png)
+![Alt text](employee-directory/public/assets/screenshot1.png)
 
 
 ## Deployed Link
